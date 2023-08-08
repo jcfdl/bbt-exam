@@ -1,0 +1,78 @@
+@use 'variables' as var;
+
+.bg-gradient-down {
+  background: linear-gradient(var.$light-blue, var.$dark-blue)
+}
+
+.header {
+  position: relative;
+  
+  nav {
+    z-index: 2;
+  }
+  
+  .header-info {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    z-index: 2;
+    position: relative;
+    width: 50%;
+    color: var.$white;
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 400;
+    }
+    
+    .subheader {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      font-weight: lighter;
+    }
+
+    .header-testimonial {
+      margin-top: 50px;
+      width: 70%;
+
+      p {
+        font-weight: bold;
+      }
+
+      .testimonial-info {
+        margin-top: 40px;
+        margin-left: 70px;
+        position: relative;
+
+        &::before {
+          content: 'JS';
+          background: var.$white;
+          color: var.$light-blue;
+          font-size: 1.2rem;
+          padding: 10px 15px;
+          border-radius: 50%;
+          position: absolute;
+          left: -70px;
+          top: 0;
+        }
+
+
+        span {
+          display: block;
+        }
+
+        .name {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .header-img {
+    overflow: hidden;
+    clip-path: polygon(75% 0, 25% 0, 50% 100%);
+    position: absolute;
+    right: -35rem;
+    top: 0;
+    z-index: 1;
+  }
+}

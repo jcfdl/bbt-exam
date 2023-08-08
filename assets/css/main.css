@@ -1,0 +1,65 @@
+.bg-gradient-down {
+  background: linear-gradient(#02bde8, #0075c5);
+}
+
+.header {
+  position: relative;
+}
+.header nav {
+  z-index: 2;
+}
+.header .header-info {
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+  z-index: 2;
+  position: relative;
+  width: 50%;
+  color: #fff;
+}
+.header .header-info h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+.header .header-info .subheader {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: lighter;
+}
+.header .header-info .header-testimonial {
+  margin-top: 50px;
+  width: 70%;
+}
+.header .header-info .header-testimonial p {
+  font-weight: bold;
+}
+.header .header-info .header-testimonial .testimonial-info {
+  margin-top: 40px;
+  margin-left: 70px;
+  position: relative;
+}
+.header .header-info .header-testimonial .testimonial-info::before {
+  content: "JS";
+  background: #fff;
+  color: #02bde8;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: -70px;
+  top: 0;
+}
+.header .header-info .header-testimonial .testimonial-info span {
+  display: block;
+}
+.header .header-info .header-testimonial .testimonial-info .name {
+  text-transform: uppercase;
+}
+.header .header-img {
+  overflow: hidden;
+  -webkit-clip-path: polygon(75% 0, 25% 0, 50% 100%);
+          clip-path: polygon(75% 0, 25% 0, 50% 100%);
+  position: absolute;
+  right: -35rem;
+  top: 0;
+  z-index: 1;
+}/*# sourceMappingURL=main.css.map */
