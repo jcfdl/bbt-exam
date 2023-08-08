@@ -1,7 +1,17 @@
-@use 'variables' as var;
+@use 'abstracts' as var;
+@use 'sections';
 
 .bg-gradient-down {
-  background: linear-gradient(var.$light-blue, var.$dark-blue)
+  background: linear-gradient(var.$light-blue, var.$dark-blue);
+  overflow: hidden;
+}
+
+.btn-pill {
+  border-radius: 20px;
+}
+
+.btn-light {
+  color: var.$dark-blue;
 }
 
 .header {
@@ -69,7 +79,7 @@
 
   .header-img {
     overflow: hidden;
-    clip-path: polygon(75% 0, 25% 0, 50% 100%);
+    @include var.triangle-down(75%, 25%);
     position: absolute;
     right: -35rem;
     top: 0;

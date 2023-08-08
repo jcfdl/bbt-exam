@@ -1,0 +1,71 @@
+@use '../abstracts' as var;
+
+.products {
+	padding: 15rem 0 10rem 0;
+	color: var.$white;
+
+	.product {
+		margin-bottom: 20px;
+	}
+
+	.product-img img {
+		border-radius: 10px;
+		@include var.box-shadow(0px, 0px, 5px, 0px, #222)
+	}
+
+	.product-title {
+		font-size: 4rem;
+		font-weight: 200;
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-left: 30px;
+		position: relative;
+
+		&.first::before {
+			@include var.product-title-icon(20px, 15px, 20px, 30px);
+			@include var.triangle-down(100%, 0%);
+		}
+
+		&.first::after {
+			@include var.product-title-icon(20px, 55px, 20px, 30px);
+			@include var.triangle-up(50%, 100%);
+		}
+
+		&.second::before {
+			@include var.product-title-icon(20px, 20px, 30px, 20px);
+			@include var.triangle-right;
+		}
+
+		&.second::after {
+			@include var.product-title-icon(20px, 50px, 30px, 20px);
+			@include var.triangle-right;
+		}
+
+		&.third::before {
+			@include var.product-title-icon(0px, 35px, 20px, 30px);
+			@include var.triangle-up(50%, 100%);
+		}
+
+		&.third::after {
+			@include var.product-title-icon(25px, 35px, 20px, 30px);
+			@include var.triangle-up(50%, 100%);
+		}
+	}
+
+	.product-description {
+		font-size: 1.5rem;
+		font-weight: lighter;
+	}
+	
+	.product-cta {
+		margin-top: 50px;
+
+		.btn {
+			font-size: 1.2rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			margin-right: 10px;
+		}
+	}
+}

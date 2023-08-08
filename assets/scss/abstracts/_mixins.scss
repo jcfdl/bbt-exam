@@ -1,0 +1,27 @@
+@use 'variables' as var;
+
+@mixin box-shadow($xOffset, $yOffset, $blur, $spread, $color) {
+	box-shadow: $xOffset $yOffset $blur $spread $color;
+}
+
+@mixin triangle-up($xMeasurement, $yMeasurement) {
+	clip-path: polygon($xMeasurement 0, 0 $yMeasurement, 100% 100%);
+}
+
+@mixin triangle-down($xMeasurement, $yMeasurement) {
+	clip-path: polygon($xMeasurement 0, $yMeasurement 0, 50% 100%);
+}
+
+@mixin triangle-right {
+	clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+
+@mixin product-title-icon($xPost, $yPost, $width, $height) {
+	content: '';
+	background: var.$white;
+	width: $width;
+	height: $height;
+	position: absolute;
+	left: $xPost;
+	top: $yPost;
+}

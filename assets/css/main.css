@@ -1,5 +1,114 @@
+.products {
+  padding: 15rem 0 10rem 0;
+  color: #fff;
+}
+.products .product {
+  margin-bottom: 20px;
+}
+.products .product-img img {
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px #222;
+}
+.products .product-title {
+  font-size: 4rem;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  position: relative;
+}
+.products .product-title.first::before {
+  content: "";
+  background: #fff;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  -webkit-clip-path: polygon(100% 0, 0% 0, 50% 100%);
+          clip-path: polygon(100% 0, 0% 0, 50% 100%);
+}
+.products .product-title.first::after {
+  content: "";
+  background: #fff;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  left: 20px;
+  top: 55px;
+  -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
+          clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+.products .product-title.second::before {
+  content: "";
+  background: #fff;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+          clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+.products .product-title.second::after {
+  content: "";
+  background: #fff;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+          clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+.products .product-title.third::before {
+  content: "";
+  background: #fff;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  left: 0px;
+  top: 35px;
+  -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
+          clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+.products .product-title.third::after {
+  content: "";
+  background: #fff;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  left: 25px;
+  top: 35px;
+  -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
+          clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+.products .product-description {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+.products .product-cta {
+  margin-top: 50px;
+}
+.products .product-cta .btn {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: 10px;
+}
+
 .bg-gradient-down {
   background: linear-gradient(#02bde8, #0075c5);
+  overflow: hidden;
+}
+
+.btn-pill {
+  border-radius: 20px;
+}
+
+.btn-light {
+  color: #0075c5;
 }
 
 .header {
