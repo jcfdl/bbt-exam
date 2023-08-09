@@ -30,14 +30,11 @@
     color: var.$white;
 
     h1 {
-      font-size: 3.5rem;
-      font-weight: 400;
+      @include var.header-title;
     }
     
     .subheader {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      font-weight: lighter;
+      @include var.subheader-info;
     }
 
     .header-testimonial {

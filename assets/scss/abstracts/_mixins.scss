@@ -25,3 +25,14 @@
 	left: $xPost;
 	top: $yPost;
 }
+
+@mixin header-title {
+	font-size: 3.5rem;
+  font-weight: 400;
+}
+
+@mixin subheader-info {
+	font-size: 1.5rem;
+	margin-top: 10px;
+	font-weight: lighter;
+}

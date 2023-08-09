@@ -1,0 +1,110 @@
+@use '../abstracts' as var;
+
+.testimonials {
+	padding-bottom: 10rem;
+	position: relative;
+
+	.testimonial-info {
+		color: var.$white;
+
+		h2 {
+			font-weight: 300;
+			font-size: 7rem;
+			margin-bottom: 0;
+			line-height: 1;
+		}
+
+		.subheader {
+			@include var.subheader-info;
+			margin-top: 0;
+		} 
+
+		.description {
+			margin-top: 40px;
+			font-weight: bold;
+		}
+	}
+	
+	.testimonial-carousel {
+		position: relative;
+	}
+
+	.testimonial-list {
+		display: flex;
+		position: absolute;
+		left: 0;
+
+		.testimonial-card {
+			padding: 2rem;
+			border-radius: 10px;
+			width: 350px;
+			margin-right: 20px;
+			background: rgba(255, 255, 255, 0.3);
+
+			&.active {
+				background: var.$white;
+			}
+
+			.testimonial-badge {
+				border: 1px solid var.$dark-blue;
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				border-radius: 50%;
+				position: relative;
+				margin-bottom: 20px;
+
+				&::after {
+					position: absolute;
+					content: '"';
+					color: var.$dark-blue;
+					font-size: 3rem;
+					left: 50%;
+					top: 70%;
+					transform: translate(-50%, -50%);
+				}
+				
+			}
+
+			.testimonial-text {
+				@include var.subheader-info;
+				font-size: 1.2rem;
+				margin-bottom: 20px;
+			}
+
+			.testimonial-writer {
+				font-weight: bold;
+				color: var.$dark-blue;
+			
+				.name {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.testimonial-selectors {
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		button {
+			height: 12px;
+			width: 12px;
+			border-radius: 50%;
+			padding: 0;
+			margin-right: 2px;
+			background: rgba(255, 255, 255, 0.3);
+			border: 1px solid rgba(255, 255, 255, 0.3);
+		
+			&.active {
+				background: var.$white;
+				border: 1px solid var.$white;
+			}
+		}
+	}
+}
