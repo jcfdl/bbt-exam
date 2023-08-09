@@ -1,0 +1,49 @@
+@use '../abstracts' as var;
+
+.cta {
+	padding: 12rem 0 15rem;
+	background: var.$white;
+	@include var.box-shadow(0px, 0px, 5px, 10px, var.$dark-blue);
+
+	.cta-promotion {
+		color: var.$white;
+		@include var.gradient-top-bottom;
+		padding: 3rem;
+		border-radius: 10px;
+		width: 50%;
+		position: relative;
+		z-index: 2;
+
+		h2 {
+			@include var.subheader-info;
+			font-size: 3.5rem;
+		}
+
+		p {
+			font-weight: bold;
+			margin: 20px 0;
+
+			&:last-of-type {
+				font-weight: 100;
+			}
+		}
+
+		.btn-pill {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	}
+
+	.cta-information {
+		position: relative;
+
+		.cta-img {
+			position: absolute;
+			z-index: 1;
+			right: 0;
+			top: 20%;
+			border-radius: 10px;
+		}
+	}
+	
+}

@@ -1,5 +1,9 @@
 @use 'variables' as var;
 
+@mixin gradient-top-bottom {
+  background: linear-gradient(var.$light-blue, var.$dark-blue);
+}
+
 @mixin box-shadow($xOffset, $yOffset, $blur, $spread, $color) {
 	box-shadow: $xOffset $yOffset $blur $spread $color;
 }

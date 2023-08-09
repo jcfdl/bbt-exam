@@ -2,7 +2,7 @@
 @use 'sections';
 
 .bg-gradient-down {
-  background: linear-gradient(var.$light-blue, var.$dark-blue);
+  @include var.gradient-top-bottom;
   overflow: hidden;
 }
 

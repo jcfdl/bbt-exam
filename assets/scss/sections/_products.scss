@@ -10,7 +10,7 @@
 
 	.product-img img {
 		border-radius: 10px;
-		@include var.box-shadow(0px, 0px, 5px, 0px, #222)
+		@include var.box-shadow(0px, 0px, 5px, 0px, var.$dark-blue)
 	}
 
 	.product-title {

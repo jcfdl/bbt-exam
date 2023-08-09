@@ -7,7 +7,7 @@
 }
 .products .product-img img {
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 0px #222;
+  box-shadow: 0px 0px 5px 0px #0075c5;
 }
 .products .product-title {
   font-size: 4rem;
@@ -192,6 +192,48 @@
 .testimonials .testimonial-selectors button.active {
   background: #fff;
   border: 1px solid #fff;
+}
+
+.cta {
+  padding: 12rem 0 15rem;
+  background: #fff;
+  box-shadow: 0px 0px 5px 10px #0075c5;
+}
+.cta .cta-promotion {
+  color: #fff;
+  background: linear-gradient(#02bde8, #0075c5);
+  padding: 3rem;
+  border-radius: 10px;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+.cta .cta-promotion h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: lighter;
+  font-size: 3.5rem;
+}
+.cta .cta-promotion p {
+  font-weight: bold;
+  margin: 20px 0;
+}
+.cta .cta-promotion p:last-of-type {
+  font-weight: 100;
+}
+.cta .cta-promotion .btn-pill {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.cta .cta-information {
+  position: relative;
+}
+.cta .cta-information .cta-img {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 20%;
+  border-radius: 10px;
 }
 
 .bg-gradient-down {
