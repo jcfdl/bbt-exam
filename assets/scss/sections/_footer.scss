@@ -1,0 +1,133 @@
+@use '../abstracts' as var;
+
+footer {
+	@include var.gradient-bottom-top;
+	padding: 7rem 0 2rem;
+	color: var.$white;
+
+	.footer-info {
+		width: 100%;
+		padding-bottom: 20px;
+		border-bottom: 1px solid var.$white;
+		display: flex;
+
+		.brand-info {
+			margin-right: 50px;
+
+			.brand-logo {
+				@include var.brand-logo;
+			}
+
+			.brand-description {
+				@include var.subheader-info;
+				line-height: 1;
+				margin-top: 30px;
+
+				.email {
+					margin-top: 5px;
+				}
+			}
+		}
+
+		.footer-links {
+			margin-right: auto;
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				display: inline-block;
+				margin-right: 20px;
+				vertical-align: top;
+				line-height: 1;
+
+				li {
+					font-weight: 200;
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+		.footer-socials {
+			.social {
+				margin-bottom: 7px;
+
+				.logo {
+					svg {
+						height: 23px;
+						width: 23px;
+
+						path {
+							fill: var.$white;
+						}
+					}
+				}
+				.name {
+					text-transform: uppercase;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
+	.footer-additional-info {
+		width: 100%;
+		display: flex;
+		font-size: 0.8rem;
+		margin-top: 10px;
+		color: var.$white;
+
+		.site-info {
+			color: var.$white;
+			margin-right: auto;
+		}
+	}
+
+	.footer-form {
+		background: var.$white;
+		color: var.$black;
+		width: 60%;
+		margin: 0 auto 7rem;
+		padding: 4rem;
+		border-radius: 20px;
+
+		h2 {
+			font-size: 2.5rem;
+			color: var.$dark-blue;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		p {
+			@include var.subheader-info;
+			font-size: 1.2rem;
+			width: 55%;
+			margin: auto;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.row {
+			width: 80%;
+			margin: auto;
+			margin-bottom: 25px;
+		}
+
+		label {
+			margin-bottom: 10px;
+		}
+
+		.btn-primary {
+			background: var.$light-blue;
+			border: 1px solid var.$light-blue;
+		}
+
+		.required {
+			position: relative;
+
+			&:after {
+				content: '*';
+				color: red;
+			}
+		}
+	}
+}

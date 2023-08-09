@@ -1,7 +1,19 @@
 @use 'variables' as var;
 
+@mixin brand-logo {
+	font-size: 1.7rem;
+	font-weight: bold;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}
+
 @mixin gradient-top-bottom {
   background: linear-gradient(var.$light-blue, var.$dark-blue);
+}
+
+@mixin gradient-bottom-top {
+  background: linear-gradient(var.$dark-blue, var.$light-blue);
 }
 
 @mixin box-shadow($xOffset, $yOffset, $blur, $spread, $color) {
