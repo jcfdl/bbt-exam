@@ -3,8 +3,11 @@ This project is given by BBT to gauge my front-end skills. The main goal of this
 
 ## Plugins
 - Bootstrap 5.3
+- JQuery 3.6
 
 ### File Structure
 - assets
    - css
 	 - scss
+	 - js
+	 - images
