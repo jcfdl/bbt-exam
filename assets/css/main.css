@@ -298,6 +298,12 @@
 .testimonials .testimonial-carousel {
   position: relative;
 }
+@media (max-width: 767px) {
+  .testimonials .testimonial-carousel {
+    margin-top: 30px;
+    height: 300px;
+  }
+}
 .testimonials .testimonial-list {
   display: flex;
   position: absolute;
