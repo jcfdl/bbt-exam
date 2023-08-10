@@ -15,7 +15,6 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 30px;
   position: relative;
 }
 .products .product-title.first::before {
@@ -329,7 +328,7 @@ footer .footer-form p {
   margin-top: 10px;
   font-weight: lighter;
   font-size: 1.2rem;
-  width: 55%;
+  width: 70%;
   margin: auto;
   text-align: center;
   margin-bottom: 30px;
@@ -366,12 +365,19 @@ footer .footer-form .required:after {
 .btn-light {
   color: #0075c5;
 }
+.btn-light:hover {
+  color: #0075c5;
+}
+
+.btn-outline-light:hover {
+  color: #0075c5;
+}
 
 .header {
   position: relative;
 }
 .header nav {
-  z-index: 2;
+  z-index: 3;
 }
 .header nav .navbar-brand {
   font-size: 1.7rem;
@@ -381,8 +387,23 @@ footer .footer-form .required:after {
   padding: 0;
   text-transform: uppercase;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header nav .nav-item {
+    font-size: 0.8rem;
+  }
+}
 .header nav .nav-item + .nav-item {
   margin-left: 2rem;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header nav .nav-item + .nav-item {
+    margin-left: 0.5rem;
+  }
+}
+@media (max-width: 991px) {
+  .header nav .nav-item + .nav-item {
+    margin-left: 0;
+  }
 }
 .header nav .nav-link {
   color: #fff;
@@ -401,6 +422,21 @@ footer .footer-form .required:after {
 .header nav .btn-search svg path {
   fill: #fff;
 }
+@media (max-width: 991px) {
+  .header nav.show-navbar-collapse .navbar-collapse {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    padding: 20px 13%;
+    background-color: #0075c5;
+  }
+}
+@media (max-width: 575px) {
+  .header nav.show-navbar-collapse .navbar-collapse {
+    padding: 20px 5%;
+  }
+}
 .header .header-info {
   padding-top: 8rem;
   padding-bottom: 10rem;
@@ -413,10 +449,20 @@ footer .footer-form .required:after {
   font-size: 3.5rem;
   font-weight: 400;
 }
+@media (max-width: 767px) {
+  .header .header-info h1 {
+    font-size: 2.5rem;
+  }
+}
 .header .header-info .subheader {
   font-size: 1.5rem;
   margin-top: 10px;
   font-weight: lighter;
+}
+@media (max-width: 767px) {
+  .header .header-info .subheader {
+    font-size: 1.2rem;
+  }
 }
 .header .header-info .header-testimonial {
   margin-top: 50px;
@@ -447,6 +493,16 @@ footer .footer-form .required:after {
 .header .header-info .header-testimonial .testimonial-info .name {
   text-transform: uppercase;
 }
+@media (max-width: 767px) {
+  .header .header-info {
+    width: 70%;
+  }
+}
+@media (max-width: 575px) {
+  .header .header-info {
+    width: 85%;
+  }
+}
 .header .header-img {
   overflow: hidden;
   -webkit-clip-path: polygon(75% 0, 25% 0, 50% 100%);
@@ -455,4 +511,14 @@ footer .footer-form .required:after {
   right: -35rem;
   top: 0;
   z-index: 1;
+}
+@media (max-width: 767px) {
+  .header .header-img {
+    right: -45rem;
+  }
+}
+@media (max-width: 575px) {
+  .header .header-img {
+    right: -35rem;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -12,22 +12,44 @@
 
 .btn-light {
   color: var.$dark-blue;
+
+  &:hover {
+    color: var.$dark-blue;
+  }
+}
+
+.btn-outline-light:hover {
+  color: var.$dark-blue;
 }
 
 .header {
   position: relative;
   
   nav {
-    z-index: 2;
+    z-index: 3;
 
     .navbar-brand {
       @include var.brand-logo;
     }
 
-    .nav-item + .nav-item {
-      margin-left: 2rem;
-    }
+    .nav-item {
+      @include var.media-breakpoint-between(lg, xl) {
+        font-size: 0.8rem;
+      }
 
+      & + .nav-item {
+        margin-left: 2rem;
+  
+        @include var.media-breakpoint-between(lg, xl) {
+          margin-left: .5rem;
+        }
+
+        @include var.media-breakpoint-down(lg) {
+          margin-left: 0;
+        }
+      }
+    }
+    
     .nav-link {
       color: var.$white
     }
@@ -48,6 +70,24 @@
         }
       }
     }
+
+    &.show-navbar-collapse {
+      .navbar-collapse {
+
+        @include var.media-breakpoint-down(lg) {
+          position: fixed;
+          top: 60px;
+          left: 0;
+          width: 100vw;
+          padding: 20px 13%;
+          background-color: var.$dark-blue;
+        }
+
+        @include var.media-breakpoint-down(sm) {
+          padding: 20px 5%;
+        }
+      }
+    }
   }
   
   .header-info {
@@ -60,10 +100,17 @@
 
     h1 {
       @include var.header-title;
+
+      @include var.media-breakpoint-down(md) {
+        font-size: 2.5rem
+      }
     }
     
     .subheader {
       @include var.subheader-info;
+      @include var.media-breakpoint-down(md) {
+        font-size: 1.2rem
+      }
     }
 
     .header-testimonial {
@@ -101,6 +148,14 @@
         }
       }
     }
+
+    @include var.media-breakpoint-down(md) {
+      width: 70%;
+    }
+
+    @include var.media-breakpoint-down(sm) {
+      width: 85%;
+    }
   }
 
   .header-img {
@@ -110,5 +165,13 @@
     right: -35rem;
     top: 0;
     z-index: 1;
+
+    @include var.media-breakpoint-down(md) {
+      right: -45rem;
+    }
+
+    @include var.media-breakpoint-down(sm) {
+      right: -35rem;
+    }
   }
 }

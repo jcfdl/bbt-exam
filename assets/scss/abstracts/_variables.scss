@@ -2,3 +2,11 @@ $light-blue: #02bde8;
 $dark-blue: #0075c5;
 $white: #fff;
 $black: #000;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

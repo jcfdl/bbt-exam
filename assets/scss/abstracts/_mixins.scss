@@ -53,3 +53,15 @@
 	margin-top: 10px;
 	font-weight: lighter;
 }
+
+@mixin media-breakpoint-up($breakpoint) {
+	@media (min-width: map-get(var.$grid-breakpoints, $breakpoint)) { @content; }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+	@media (max-width: #{map-get(var.$grid-breakpoints, $breakpoint) - 1}) { @content; }
+}
+
+@mixin media-breakpoint-between($min, $max) {
+	@media (min-width: map-get(var.$grid-breakpoints, $min)) and (max-width: #{map-get(var.$grid-breakpoints, $max) - 1}) { @content; }
+}
