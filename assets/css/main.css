@@ -379,6 +379,16 @@
   background: #fff;
   box-shadow: 0px 0px 5px 10px #0075c5;
 }
+@media (max-width: 1199px) {
+  .cta {
+    padding: 7rem 0 12rem;
+  }
+}
+@media (max-width: 991px) {
+  .cta {
+    padding: 7rem 0;
+  }
+}
 .cta .cta-promotion {
   color: #fff;
   background: linear-gradient(#02bde8, #0075c5);
@@ -387,6 +397,16 @@
   width: 50%;
   position: relative;
   z-index: 2;
+}
+@media (max-width: 1199px) {
+  .cta .cta-promotion {
+    width: 60%;
+  }
+}
+@media (max-width: 991px) {
+  .cta .cta-promotion {
+    width: 100%;
+  }
 }
 .cta .cta-promotion h2 {
   font-size: 1.5rem;
@@ -415,6 +435,13 @@
   top: 20%;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 0 #ccc;
+}
+@media (max-width: 991px) {
+  .cta .cta-information .cta-img {
+    position: static;
+    max-width: 100%;
+    margin-top: 20px;
+  }
 }
 
 footer {
