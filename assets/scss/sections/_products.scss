@@ -4,8 +4,20 @@
 	padding: 15rem 0 7rem 0;
 	color: var.$white;
 
+	@include var.media-breakpoint-down(lg) {
+		padding: 1rem 0 7rem;
+	}
+
+	@include var.media-breakpoint-down(md) {
+		padding: 12rem 0 3rem;
+	}
+
 	.product {
 		margin-bottom: 20px;
+
+		@include var.media-breakpoint-down(md) {
+			margin-bottom: 40px;
+		}
 	}
 
 	.product-img img {
@@ -21,40 +33,102 @@
 		margin-bottom: 20px;
 		position: relative;
 
+		@include var.media-breakpoint-down(xl) {
+      font-size: 2.5rem;
+    }
+
+		@include var.media-breakpoint-down(lg) {
+      font-size: 1.5rem;
+    }
+
 		&.first::before {
 			@include var.product-title-icon(20px, 15px, 20px, 30px);
 			@include var.triangle-down(100%, 0%);
+
+			@include var.media-breakpoint-down(xl) {
+				@include var.product-title-icon(20px, 10px, 15px, 20px);
+			}
+
+			@include var.media-breakpoint-down(lg) {
+				@include var.product-title-icon(20px, 5px, 10px, 15px);
+			}
 		}
 
 		&.first::after {
 			@include var.product-title-icon(20px, 55px, 20px, 30px);
 			@include var.triangle-up(50%, 100%);
+
+			@include var.media-breakpoint-down(xl) {
+				@include var.product-title-icon(20px, 35px, 15px, 20px);
+			}
+
+			@include var.media-breakpoint-down(lg) {
+				@include var.product-title-icon(20px, 25px, 10px, 15px);
+			}
 		}
 
 		&.second::before {
 			@include var.product-title-icon(20px, 20px, 30px, 20px);
 			@include var.triangle-right;
+
+			@include var.media-breakpoint-down(xl) {
+				@include var.product-title-icon(20px, 15px, 20px, 15px);
+			}
+
+			@include var.media-breakpoint-down(lg) {
+				@include var.product-title-icon(20px, 5px, 15px, 10px);
+			}
 		}
 
 		&.second::after {
 			@include var.product-title-icon(20px, 50px, 30px, 20px);
 			@include var.triangle-right;
+
+			@include var.media-breakpoint-down(xl) {
+				@include var.product-title-icon(20px, 35px, 20px, 15px);
+			}
+
+			@include var.media-breakpoint-down(lg) {
+				@include var.product-title-icon(20px, 25px, 15px, 10px);
+			}
 		}
 
 		&.third::before {
 			@include var.product-title-icon(0px, 35px, 20px, 30px);
 			@include var.triangle-up(50%, 100%);
+
+			@include var.media-breakpoint-down(xl) {
+				@include var.product-title-icon(10px, 20px, 15px, 20px);
+			}
+
+			@include var.media-breakpoint-down(lg) {
+				@include var.product-title-icon(15px, 15px, 10px, 15px);
+			}
 		}
 
 		&.third::after {
 			@include var.product-title-icon(25px, 35px, 20px, 30px);
 			@include var.triangle-up(50%, 100%);
+
+			@include var.media-breakpoint-down(xl) {
+				@include var.product-title-icon(30px, 20px, 15px, 20px);
+			}
+
+			@include var.media-breakpoint-down(lg) {
+				@include var.product-title-icon(30px, 15px, 10px, 15px);
+			}
 		}
+
+		
 	}
 
 	.product-description {
 		font-size: 1.5rem;
 		font-weight: lighter;
+
+		@include var.media-breakpoint-down(lg) {
+      font-size: 1rem;
+    }
 	}
 	
 	.product-cta {
@@ -65,6 +139,18 @@
 			padding-left: 1rem;
 			padding-right: 1rem;
 			margin-right: 10px;
+
+			@include var.media-breakpoint-down(lg) {
+				font-size: .7rem;
+				padding-left: .5rem;
+				padding-right: .5rem;
+				margin-right: 5px;
+
+			}
+		}
+
+		@include var.media-breakpoint-down(lg) {
+			margin-top: 20px;
 		}
 	}
 }
