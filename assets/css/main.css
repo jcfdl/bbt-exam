@@ -455,8 +455,19 @@ footer .footer-info {
   border-bottom: 1px solid #fff;
   display: flex;
 }
+@media (max-width: 991px) {
+  footer .footer-info {
+    flex-wrap: wrap;
+  }
+}
 footer .footer-info .brand-info {
   margin-right: 50px;
+}
+@media (max-width: 991px) {
+  footer .footer-info .brand-info {
+    margin-right: 0;
+    width: 50%;
+  }
 }
 footer .footer-info .brand-info .brand-logo {
   font-size: 1.7rem;
@@ -471,13 +482,25 @@ footer .footer-info .brand-info .brand-description {
   margin-top: 10px;
   font-weight: lighter;
   line-height: 1;
-  margin-top: 30px;
+  margin-top: 20px;
+}
+@media (max-width: 991px) {
+  footer .footer-info .brand-info .brand-description {
+    font-size: 1rem;
+  }
 }
 footer .footer-info .brand-info .brand-description .email {
   margin-top: 5px;
 }
 footer .footer-info .footer-links {
   margin-right: auto;
+}
+@media (max-width: 991px) {
+  footer .footer-info .footer-links {
+    padding-left: 10%;
+    width: 40%;
+    margin-right: 0;
+  }
 }
 footer .footer-info .footer-links ul {
   list-style-type: none;
@@ -491,6 +514,11 @@ footer .footer-info .footer-links ul {
 footer .footer-info .footer-links ul li {
   font-weight: 200;
   margin-bottom: 5px;
+}
+@media (max-width: 991px) {
+  footer .footer-info .footer-socials {
+    margin-top: 20px;
+  }
 }
 footer .footer-info .footer-socials .social {
   margin-bottom: 7px;
@@ -513,9 +541,19 @@ footer .footer-additional-info {
   margin-top: 10px;
   color: #fff;
 }
+@media (max-width: 575px) {
+  footer .footer-additional-info {
+    flex-wrap: wrap;
+  }
+}
 footer .footer-additional-info .site-info {
   color: #fff;
   margin-right: auto;
+}
+@media (max-width: 575px) {
+  footer .footer-additional-info .site-info {
+    margin-bottom: 20px;
+  }
 }
 footer .footer-form {
   background: #fff;
@@ -525,11 +563,28 @@ footer .footer-form {
   padding: 4rem;
   border-radius: 20px;
 }
+@media (max-width: 1199px) {
+  footer .footer-form {
+    width: 80%;
+  }
+}
+@media (max-width: 991px) {
+  footer .footer-form {
+    width: 100%;
+    padding: 2rem;
+  }
+}
 footer .footer-form h2 {
   font-size: 2.5rem;
   color: #0075c5;
   text-align: center;
   margin-bottom: 30px;
+}
+@media (max-width: 991px) {
+  footer .footer-form h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+  }
 }
 footer .footer-form p {
   font-size: 1.5rem;
@@ -541,9 +596,22 @@ footer .footer-form p {
   text-align: center;
   margin-bottom: 30px;
 }
+@media (max-width: 991px) {
+  footer .footer-form p {
+    font-size: 1rem;
+    width: 80%;
+  }
+}
 footer .footer-form .row {
   width: 80%;
   margin: auto;
+}
+@media (max-width: 991px) {
+  footer .footer-form .row {
+    width: 100%;
+  }
+}
+footer .footer-form .row div {
   margin-bottom: 25px;
 }
 footer .footer-form label {
