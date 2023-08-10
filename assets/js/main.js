@@ -61,3 +61,16 @@ function clearForm(form) {
 			$(this).val("");
 	})
 }
+
+$('.testimonial-selector').on("click", function() {
+	$('.testimonial-selector.active').removeClass('active')
+	$(this).addClass('active')
+
+	let childNum = $(this).attr('aria-describedby')
+	let className = `active-${childNum}`;
+	let testimonial = $('#testimonialList')
+	testimonial.removeClass()
+	testimonial.addClass(className)
+	$('.testimonial-card.active').removeClass('active')
+	$('#testimonialList').children('div').eq(childNum).addClass('active')
+})

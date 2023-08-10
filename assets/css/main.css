@@ -304,22 +304,40 @@
     height: 300px;
   }
 }
-.testimonials .testimonial-list {
+.testimonials #testimonialList {
   display: flex;
   position: absolute;
+  transition: left 0.3s;
   left: 0;
 }
-.testimonials .testimonial-list .testimonial-card {
+.testimonials #testimonialList.active-0 {
+  left: 0;
+}
+.testimonials #testimonialList.active-1 {
+  left: -370px;
+}
+.testimonials #testimonialList.active-1 .testimonial-card:nth-child(1) {
+  opacity: 0;
+}
+.testimonials #testimonialList.active-2 {
+  left: -740px;
+}
+.testimonials #testimonialList.active-2 .testimonial-card:nth-child(1),
+.testimonials #testimonialList.active-2 .testimonial-card:nth-child(2) {
+  opacity: 0;
+}
+.testimonials #testimonialList .testimonial-card {
   padding: 2rem;
   border-radius: 10px;
   width: 350px;
   margin-right: 20px;
   background: rgba(255, 255, 255, 0.3);
+  transition: opacity 0.3s;
 }
-.testimonials .testimonial-list .testimonial-card.active {
+.testimonials #testimonialList .testimonial-card.active {
   background: #fff;
 }
-.testimonials .testimonial-list .testimonial-card .testimonial-badge {
+.testimonials #testimonialList .testimonial-card .testimonial-badge {
   border: 1px solid #0075c5;
   width: 50px;
   height: 50px;
@@ -328,7 +346,7 @@
   position: relative;
   margin-bottom: 20px;
 }
-.testimonials .testimonial-list .testimonial-card .testimonial-badge::after {
+.testimonials #testimonialList .testimonial-card .testimonial-badge::after {
   position: absolute;
   content: '"';
   color: #0075c5;
@@ -337,18 +355,18 @@
   top: 70%;
   transform: translate(-50%, -50%);
 }
-.testimonials .testimonial-list .testimonial-card .testimonial-text {
+.testimonials #testimonialList .testimonial-card .testimonial-text {
   font-size: 1.5rem;
   margin-top: 10px;
   font-weight: lighter;
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
-.testimonials .testimonial-list .testimonial-card .testimonial-writer {
+.testimonials #testimonialList .testimonial-card .testimonial-writer {
   font-weight: bold;
   color: #0075c5;
 }
-.testimonials .testimonial-list .testimonial-card .testimonial-writer .name {
+.testimonials #testimonialList .testimonial-card .testimonial-writer .name {
   display: block;
 }
 .testimonials .testimonial-selectors {
