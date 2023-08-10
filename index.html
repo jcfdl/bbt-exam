@@ -197,40 +197,44 @@
     </div>
     <footer>
       <div class="container">
-        <div class="footer-form">
+        <form id="contactUs" class="footer-form">
           <h2>Are you ready to get started?</h2>
           <p>Fill out your details below and someone from our friendly team will be in touch soon.</p>
           <div class="row">
             <div class="col-md-6">
               <label class="required">First name</label>
-              <input class="form-control" placeholder="First name" />
+              <input class="form-control" placeholder="First name" id="firstName" aria-describedby="firstNameFeedback" required />
+              <div id="firstNameFeedback" class="invalid-feedback"></div>
             </div>
             <div class="col-md-6">
               <label class="required">Last name</label>
-              <input class="form-control" placeholder="Last name" />
+              <input class="form-control" placeholder="Last name" id="lastName" aria-describedby="lastNameFeedback" required />
+              <div id="lastNameFeedback" class="invalid-feedback"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <label class="required">Email address</label>
-              <input class="form-control" placeholder="Email address" />
+              <input class="form-control" placeholder="Email address" id="email" aria-describedby="emailFeedback" required />
+              <div id="emailFeedback" class="invalid-feedback"></div>
             </div>
             <div class="col-md-6">
               <label class="required">Contact number</label>
-              <input class="form-control" placeholder="Contact number" />
+              <input class="form-control" placeholder="Contact number" id="contactNumber" aria-describedby="contactNumberFeedback" required />
+              <div id="contactNumberFeedback" class="invalid-feedback"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <label>Preferred contact time</label>
-              <select class="form-control">
+              <select class="form-control" id="contactTime">
                 <option value="9:00am">9:00am</option>
                 <option value="10:00am">10:00am</option>
               </select>
             </div>
             <div class="col-md-6">
               <label>Enquiry topic</label>
-              <select class="form-control">
+              <select class="form-control" id="topic">
                 <option value="Kiwisaver">Kiwisaver</option>
                 <option value="Insurance">Insurance</option>
               </select>
@@ -252,10 +256,10 @@
               </div>
             </div>
             <div class="col-md-4">
-              <button class="btn btn-primary btn-pill ms-auto d-block">Send</button>
+              <button type="submit" class="btn btn-primary btn-pill ms-auto d-block">Send</button>
             </div>
           </div>
-        </div>
+        </form>
         <div class="footer-info">
           <div class="brand-info">
             <div class="brand-logo">HAVEN</div>

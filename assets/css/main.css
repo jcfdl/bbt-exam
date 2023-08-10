@@ -611,7 +611,7 @@ footer .footer-form .row {
     width: 100%;
   }
 }
-footer .footer-form .row div {
+footer .footer-form .row > div {
   margin-bottom: 25px;
 }
 footer .footer-form label {
